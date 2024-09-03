@@ -6,14 +6,13 @@ const app = Vue.createApp({
     /* html */
     `
     <nav class="main nav-bar">
-        <div class="nav-bar-item">Productos</div>
-        <div class="nav-bar-item"><span class="bi-cart"></span></div>
+        <div class="nav-bar-items-container">
+            <div class="nav-bar-item">Inicio</div>
+        </div>
     </nav>
 
     <main>
-        <div></div> 
-
-        <catalog></catalog>
+        
     </main>
 
     <footer>

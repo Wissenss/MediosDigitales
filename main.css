@@ -19,8 +19,16 @@
     width: 100%;
 
     z-index: 100;
+
+    display: flex;
+}
+
+.nav-bar-items-container {
+    flex: 1;
+
+    display: flex;
 }
 
 .nav-bar-item {
-    display: inline-block;
+    /* display: inline-block; */
 }
