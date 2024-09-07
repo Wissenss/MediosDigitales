@@ -7,7 +7,7 @@ const app = Vue.createApp({
     `
     <nav class="main nav-bar">
         <div class="nav-bar-items-container">
-            <div class="nav-bar-item">Inicio</div>
+            <div class="nav-bar-item">PlaceholderName</div>
         </div>
     </nav>
 
