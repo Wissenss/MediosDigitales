@@ -5,14 +5,16 @@ const app = Vue.createApp({
     template: 
     /* html */
     `
-    <nav class="main nav-bar">
-        <div class="nav-bar-items-container">
-            <div class="nav-bar-item">PlaceholderName</div>
-        </div>
-    </nav>
+    <header>
+        <nav class="main nav-bar">
+            <div class="nav-bar-items-container">
+                <div class="nav-bar-item">PlaceholderName</div>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        
+        <google-map></google-map>
     </main>
 
     <footer>

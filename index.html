@@ -19,180 +19,25 @@
     <!-- maps api -->
     <script>
         const DEBUG = true;
-        const STYLING_ONLY = false;
+        const STYLING_ONLY = true;
 
         let map = null;
-
-        function initMap()
-        {
-            DEBUG && console.log("initMap called")
-
-            if ("geolocation" in navigator == false) 
-            {
-                return alert("geolocation module is not available on browser")
-            }
-
-            if (STYLING_ONLY)
-            {
-                return;
-            }
-
-            const options = {
-                enableHighAccuracy: true,
-                timeout: 5000,
-                maximumAge: 0,
-            };
-
-            navigator.geolocation.getCurrentPosition((pos) => {
-                updateMapPos(pos.coords.latitude, pos.coords.longitude);
-            }, (error) => { alert(error) }, options);
-        }
-
-        function updateMapPos(latitude, longitude)
-        {
-            DEBUG && console.log(`updating map... \nlatitude: ${latitude} longitude: ${longitude}`);
-
-            const currentLocation = { lat: latitude, lng: longitude }
-
-            map = new google.maps.Map(document.getElementById("map"), {
-                center: currentLocation,
-                zoom: 15,
-                styles: [
-                  { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
-                  { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
-                  { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
-                  {
-                    featureType: "administrative.locality",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#d59563" }],
-                  },
-                  {
-                    featureType: "poi",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#d59563" }],
-                  },
-                  {
-                    featureType: "poi.park",
-                    elementType: "geometry",
-                    stylers: [{ color: "#263c3f" }],
-                  },
-                  {
-                    featureType: "poi.park",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#6b9a76" }],
-                  },
-                  {
-                    featureType: "road",
-                    elementType: "geometry",
-                    stylers: [{ color: "#38414e" }],
-                  },
-                  {
-                    featureType: "road",
-                    elementType: "geometry.stroke",
-                    stylers: [{ color: "#212a37" }],
-                  },
-                  {
-                    featureType: "road",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#9ca5b3" }],
-                  },
-                  {
-                    featureType: "road.highway",
-                    elementType: "geometry",
-                    stylers: [{ color: "#746855" }],
-                  },
-                  {
-                    featureType: "road.highway",
-                    elementType: "geometry.stroke",
-                    stylers: [{ color: "#1f2835" }],
-                  },
-                  {
-                    featureType: "road.highway",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#f3d19c" }],
-                  },
-                  {
-                    featureType: "transit",
-                    elementType: "geometry",
-                    stylers: [{ color: "#2f3948" }],
-                  },
-                  {
-                    featureType: "transit.station",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#d59563" }],
-                  },
-                  {
-                    featureType: "water",
-                    elementType: "geometry",
-                    stylers: [{ color: "#17263c" }],
-                  },
-                  {
-                    featureType: "water",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#515c6d" }],
-                  },
-                  {
-                    featureType: "water",
-                    elementType: "labels.text.stroke",
-                    stylers: [{ color: "#17263c" }],
-                  },
-                ]
-            });
-
-            const service = new google.maps.places.PlacesService(map);
-
-            const keywordToSearch = "oxxo"
-            const typeToSeach = "" 
-
-            service.nearbySearch({
-                location: currentLocation,
-                radius: 500,
-                keyword: keywordToSearch,
-                type: typeToSeach
-            }, (results, status, pagination) => {
-                addPlace(results, map);
-            });
-        }
-
-        function addPlace(places, map)
-        {
-            for (const place of places) {
-                if (place.geometry && place.geometry.location) {
-                    const image = {
-                        url: place.icon,
-                        size: new google.maps.Size(71, 71),
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(17, 34),
-                        scaledSize: new google.maps.Size(25, 25),
-                    };
-
-                    new google.maps.Marker({
-                        map,
-                        icon: image,
-                        title: place.name,
-                        position: place.geometry.location,
-                    });
-                }
-            }
-        }
     </script>
 
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKKocNLjchb9Ub-98XJXYDlfFgxH1Bu-w&callback=initMap&libraries=places&v=weekly"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKKocNLjchb9Ub-98XJXYDlfFgxH1Bu-w&&libraries=places&v=weekly"
         defer
     >
     </script>
 
     <!-- custom styles -->
     <link rel="stylesheet" href="main.css"/>
-
-    <link rel="stylesheet" href="components/catalog.css"/>
-    <link rel="stylesheet" href="components/catalogItem.css"/>
+    <link rel="stylesheet" href="components/map.css"/>
 </head>
 <body>
     
     <div id="app"></div>
-	<div class="map-display">
+	<!-- <div class="map-display">
         <div class="map" id="map"></div>
         <div class="places-list">
             <div class="place">
@@ -200,14 +45,13 @@
                 <p class="place-direction">direccion 123 casa mama</p>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- import app -->
     <script src="main.js"></script>
 
     <!-- import components -->
-    <script src="components/catalog.js"></script>
-    <script src="components/catalogItem.js"></script>
+    <script src="components/map.js"></script>
 
     <!-- mount app -->
     <script>
