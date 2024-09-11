@@ -19,6 +19,17 @@ body {
     margin: 0px;
 
     background-color: var(--main-color);
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: min-content 1fr;
 }
 
 header {
@@ -57,4 +68,12 @@ header {
 }
 
 /* main styles */
+main {
+    height: auto;
 
+    width: 100%;
+    display: flex;
+  
+    justify-content: space-between;
+    gap: 10px;
+}

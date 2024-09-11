@@ -1,16 +1,9 @@
 /* map display styles */
-.map-display {
-  width: 100%;
-  display: flex;
-
-  justify-content: space-between;
-  gap: 10px;
-}
 
 .map {
   flex: 1;
 
-  height: 400px;
+  height: 100%;
 
   background: red;
 }
