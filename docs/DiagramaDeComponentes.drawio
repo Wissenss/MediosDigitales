@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="Página-1" id="Rl9E8L0giMu9CMcOFH5O">
+    <mxGraphModel dx="794" dy="446" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="re-8fKOhN9hzcWz28xwX-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="re-8fKOhN9hzcWz28xwX-2" value="PlaceholderName (applicación)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="re-8fKOhN9hzcWz28xwX-3" value="Diagrama de Componentes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="re-8fKOhN9hzcWz28xwX-4" value="LibraryScanner" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="130" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="re-8fKOhN9hzcWz28xwX-5" value="MetadataReader" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="130" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="re-8fKOhN9hzcWz28xwX-6" value="ObjectBinder" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="200" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="re-8fKOhN9hzcWz28xwX-7" value="Library" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="270" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="re-8fKOhN9hzcWz28xwX-9" value="External applications (pdf readers)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="386" y="266" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="re-8fKOhN9hzcWz28xwX-12" value="Storage" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="386" y="130" width="164" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="re-8fKOhN9hzcWz28xwX-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="re-8fKOhN9hzcWz28xwX-1" target="re-8fKOhN9hzcWz28xwX-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="240" as="sourcePoint" />
+            <mxPoint x="410" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="re-8fKOhN9hzcWz28xwX-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="re-8fKOhN9hzcWz28xwX-12" target="re-8fKOhN9hzcWz28xwX-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="240" as="sourcePoint" />
+            <mxPoint x="410" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
