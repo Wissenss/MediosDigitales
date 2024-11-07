@@ -1,79 +1,37 @@
-:root {
-    --main-color: #222629;
-    --secondary-color: #474B4F;
-    --tertiary-color: #6B6E70;
-
-    --main-accent-color: #86C232;
-    --secondary-accent-color: #61892F;
-
-    --main-text: var(--tertiary-color);
-    --secondary-text: var(--secondary-color);
-
-    --transparent-color: rgba(255, 255, 255, 0);
-}
-
+/* Estilos globales */
 body {
-    font-family: "Anek Latin", sans-serif; 
-    
-    height: 100vh;
-    margin: 0px;
-
-    background-color: var(--main-color);
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-}
-
-#app {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: min-content 1fr;
-}
-
-header {
-    --nav-bar-height: 40px;
-
-    height: var(--nav-bar-height);
-}
-
-/* nav-bar styles */
-.main.nav-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--nav-bar-height);
-
-    z-index: 100;
-    align-items: center;
-
-    display: flex;
-
-    background-color: var(--main-color);
-    box-shadow: 0px 0px 1px 0px rgba(71, 75, 79, 0.5);
-    /* border-bottom: 1px dashed rgba(71, 75, 79, 0.2); */
-}
-
-.nav-bar-items-container {
-    flex: 1;
-
-    display: flex;
-}
-
-.nav-bar-item {
-    margin: 0px 0px 0px 10px;
-    color: var(--tertiary-color)
-}
-
-/* main styles */
-main {
-    height: auto;
-
-    width: 100%;
-    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
   
+  /* Estilos para la aplicación */
+  .app {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .navbar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .header {
+    flex: 1;
+    padding: 20px;
+    display: flex;
     justify-content: space-between;
-    gap: 10px;
-}
+    align-items: center;
+  }
+  
+  .book-list {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .book-item {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
