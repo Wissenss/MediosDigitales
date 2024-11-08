@@ -1,47 +1,52 @@
 <template>
   <div class="app">
-    <div class="header-container">
-      <Navbar />
+    <VerticalNav />
+    <div class="main-content">
       <Header />
+      <ItemList :items="items" />
+      <NewBookButton />
     </div>
-    <BookList :books="books" />
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue';
-import Header from './components/Header.vue';
-import BookList from './components/BookList.vue';
+import VerticalNav from "./components/Navbar.vue";
+import Header from "./components/Header.vue";
+import ItemList from "./components/BookList.vue";
+import NewBookButton from "./components/NewBookButton.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Navbar,
+    VerticalNav,
     Header,
-    BookList
+    ItemList,
+    NewBookButton,
   },
   data() {
     return {
-      books: [
-        { id: 1, title: 'Libro 1' },
-        { id: 2, title: 'Libro 2' },
-        // ... más libros
-      ]
-    }
-  }
-}
+      items: [
+        { id: 1, title: "List item" },
+        { id: 2, title: "List item" },
+        { id: 3, title: "List item" },
+        { id: 4, title: "List item" },
+        { id: 5, title: "List item" },
+        { id: 6, title: "List item" },
+        { id: 7, title: "List item" },
+      ],
+    };
+  },
+};
 </script>
 
-<style>
+<style scoped>
 .app {
-  font-family: Arial, sans-serif;
   display: flex;
-  flex-direction: column;
   height: 100vh;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
+.main-content {
+  flex: 1;
+  background-color: #f7edf9;
 }
 </style>
