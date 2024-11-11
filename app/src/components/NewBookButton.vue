@@ -1,12 +1,17 @@
 <template>
-    <div class="new-book-button">
+    <button @click="onNewBookButtonClick" class="new-book-button">
         <button class="new-book-btn">New Book</button>
-    </div>
+    </button>
 </template>
   
 <script>
     export default {
         name: "NewBookButton",
+        methods: {
+            onNewBookButtonClick() {
+                this.$emit("button-click")
+            }
+        }
     };
 </script>
 
