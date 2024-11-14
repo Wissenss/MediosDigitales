@@ -25,13 +25,13 @@
 
 <style scoped>
     .vertical-nav {
-        width: 100px;
+        width: 300px;
         background-color: #f7edf9;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 20px;
-        height: 97.4vh;
+        height: 97.5vh;
     }
 
     .nav-item {

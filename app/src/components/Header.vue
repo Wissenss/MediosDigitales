@@ -12,20 +12,23 @@
 </template>
 
 <script>
-    export default {
-        name: "Header",
-    };
+export default {
+    name: "Header",
+};
 </script>
 
 <style scoped>
     .header {
-        display: outside;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
         padding: 10px;
-        background-color: #a5a0a6;
+        width: 1050px;
+        height: 100px; /* Ajusta la altura según lo necesario */
+        background-color: #fae6fa;
     }
 
+    /* Parte superior izquierda */
     .header-title {
         display: flex;
         align-items: center;
@@ -38,9 +41,12 @@
         margin-right: 8px;
     }
 
+    /* Parte inferior derecha */
     .header-actions {
         display: flex;
+        justify-content: flex-end;
         gap: 10px;
+        margin-top: auto;
     }
 
     .icon-button {

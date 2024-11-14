@@ -6,17 +6,24 @@
 </template>
   
 <script>
-    export default {
-        name: "ActionButtons",
-        methods: {
-            submitForm() {
-                // Acción de submit
-            },
-            cancelForm() {
-                // Acción de cancelar
-            },
-        },
-    };
+import { inject } from 'vue';
+
+export default {
+    name: "ActionButtons",
+    setup(_, { emit }) {
+        const togglePopup = inject('togglePopup');
+        
+        const submitForm = () => {
+            emit("submit");
+        };
+
+        const cancelForm = () => {
+            togglePopup(false); // Cierra el popup
+        };
+
+        return { submitForm, cancelForm };
+    },
+};
 </script>
   
 <style scoped>

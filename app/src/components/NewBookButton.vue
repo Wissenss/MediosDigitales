@@ -1,29 +1,32 @@
 <template>
-    <button @click="onNewBookButtonClick" class="new-book-button">
-        <button class="new-book-btn">New Book</button>
-    </button>
+    <p></p>
+    <button @click="openPopup" class="new-book-button"> New Book</button>
 </template>
   
 <script>
-    export default {
-        name: "NewBookButton",
-        methods: {
-            onNewBookButtonClick() {
-                this.$emit("button-click")
-            }
-        }
-    };
+import { inject } from 'vue';
+
+export default {
+    name: "NewBookButton",
+    setup() {
+        // Inyectamos el método togglePopup proporcionado en App.vue
+        const togglePopup = inject('togglePopup');
+
+        const openPopup = () => {
+            // Abrimos el popup pasando `true` a togglePopup
+            togglePopup(true);
+        };
+
+        return { openPopup };
+    }
+};
 </script>
 
 <style scoped>
     .new-book-button {
-        display: flex;
+        display: center;
         justify-content: center;
         padding: 20px;
-    }
-
-    .new-book-btn {
-        padding: 10px 20px;
         font-size: 14px;
         background-color: #333;
         color: #fff;
@@ -32,4 +35,3 @@
         cursor: pointer;
     }
 </style>
-  

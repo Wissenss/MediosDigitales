@@ -26,7 +26,8 @@
 <style scoped>
     .item-list {
         padding: 20px;
-        background-color: #f7edf9;
+        background-color: #fcd5fc;
+        width: 1000px;
     }
 
     .list-item {

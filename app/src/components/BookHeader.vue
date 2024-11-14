@@ -9,7 +9,7 @@
   
 <script>
     export default {
-        name: "Header",
+        name: "BookHeader",
     };
 </script>
 
@@ -18,7 +18,7 @@
         display: flex;
         align-items: center;
         padding: 20px;
-        background-color: #f7f7f7;
+        background-color: #a09c9c;
         font-size: 20px;
         font-weight: bold;
     }

@@ -13,7 +13,7 @@
             <div class="genre-carousel">
                 <button @click="prevGenre">←</button>
                 <span class="genre" v-for="(genre, index) in genres" :key="index" :class="{ active: index === currentGenre }">
-                    
+                    {{ genre }}
                 </span>
                 <button @click="nextGenre">→</button>
             </div>
@@ -26,35 +26,40 @@
 </template>
   
 <script>
-    export default {
-        name: "BookForm",
-        data() {
-            return {
-                book: {
-                    title: "",
-                    author: "",
-                    genre: "",
-                    file: null,
-                },
-                genres: ["Action", "Suspense", "Romance", "Mistery", "Fantasy", "Comedy"],
-                currentGenre: 0,
-            };
+export default {
+    name: "BookForm",
+    data() {
+        return {
+            book: {
+                title: "",
+                author: "",
+                genre: "",
+                file: null,
+            },
+            genres: ["Action", "Suspense", "Romance", "Mistery", "Fantasy", "Comedy"],
+            currentGenre: 0,
+        };
+    },
+    methods: {
+        prevGenre() {
+            this.currentGenre = (this.currentGenre - 1 + this.genres.length) % this.genres.length;
+            this.book.genre = this.genres[this.currentGenre];
         },
-        methods: {
-            prevGenre() {
-                this.currentGenre = (this.currentGenre - 1 + this.genres.length) % this.genres.length;
-                this.book.genre = this.genres[this.currentGenre];
-            },
-            nextGenre() {
-                this.currentGenre = (this.currentGenre + 1) % this.genres.length;
-                this.book.genre = this.genres[this.currentGenre];
-            },
-            handleFileUpload(event) {
-                this.book.file = event.target.files[0];
-            },
+        nextGenre() {
+            this.currentGenre = (this.currentGenre + 1) % this.genres.length;
+            this.book.genre = this.genres[this.currentGenre];
         },
-    };
+        handleFileUpload(event) {
+            this.book.file = event.target.files[0];
+        },
+        submitForm() {
+            // Emitimos el objeto book al componente padre
+            this.$emit("submit-book", this.book);
+        }
+    }
+};
 </script>
+
   
 <style scoped>
     .book-form {
