@@ -28,8 +28,8 @@ export default {
         justify-content: center;
         padding: 20px;
         font-size: 14px;
-        background-color: #333;
-        color: #fff;
+        background-color: var(--background-color);
+        color: var(--text-color);
         border: none;
         border-radius: 5px;
         cursor: pointer;

@@ -35,20 +35,30 @@ export default {
 
     .submit-btn {
         padding: 10px 20px;
-        background-color: #333;
-        color: #fff;
+        background-color: var(--background-color);
+        color: var(--text-color);
         border: none;
         border-radius: 5px;
         cursor: pointer;
     }
 
+    .submit-btn:hover {
+        background-color: #f0f0f0; /* Color de fondo al hacer hover */
+        color: #000; /* Color del texto al hacer hover */
+    }
+
     .cancel-btn {
         padding: 10px 20px;
-        background-color: #ddd;
-        color: #333;
+        background-color: var(--background-color);
+        color: var(--text-color);
         border: none;
         border-radius: 5px;
         cursor: pointer;
+    }
+
+    .cancel-btn:hover{
+        background-color: #f0f0f0; /* Color de fondo al hacer hover */
+        color: #000; /* Color del texto al hacer hover */
     }
 </style>
   
