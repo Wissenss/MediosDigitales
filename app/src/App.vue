@@ -1,7 +1,7 @@
 <template>
     <div class="app">
         <!--<RouterLink to="/">Go to Home</RouterLink>-->
-        <RouterLink to="/newUser">Go to Home</RouterLink>
+        <RouterLink to="/user">Go to Home</RouterLink>
         <router-view/>
     </div>
 </template>
