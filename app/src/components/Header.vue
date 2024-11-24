@@ -25,7 +25,7 @@ export default {
         padding: 10px;
         width: 1050px;
         height: 100px; /* Ajusta la altura según lo necesario */
-        background-color: #fae6fa;
+        background-color: var(--background-color-2);
     }
 
     /* Parte superior izquierda */

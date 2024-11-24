@@ -14,14 +14,19 @@
 }
 :root {
     --background-color: #ffffff;
+    --background-color-2: #DFACE6;
+    --background-color-3: #fcd5fc;
     --text-color: #000000;
     --popup-background-color: #f7edf9;
     --icon-background-color: #f0f0f0;
     --border-color: #ddd;
+
   }
   
   body.dark-mode {
     --background-color: #121212;
+    --background-color-2: #7d3d88;
+    --background-color-3: #9a7b9a;
     --text-color: #ffffff;
     --popup-background-color: #333;
     --icon-background-color: #555;
@@ -44,7 +49,7 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
 
 h1 {

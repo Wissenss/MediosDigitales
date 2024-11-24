@@ -26,7 +26,7 @@
 <style scoped>
     .item-list {
         padding: 20px;
-        background-color: #fcd5fc;
+        background-color: var(--background-color-3);
         width: 1000px;
     }
 
@@ -48,7 +48,7 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        background-color: #e1cce5;
+        background-color: var(--background-color-3);
         display: flex;
         align-items: center;
         justify-content: center;
