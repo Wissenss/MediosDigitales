@@ -42,13 +42,8 @@ export default {
     data() {
         return {
             items: [
-                { id: 1, title: "List item" },
-                { id: 2, title: "List item" },
-                { id: 3, title: "List item" },
-                { id: 4, title: "List item" },
-                { id: 5, title: "List item" },
-                { id: 6, title: "List item" },
-                { id: 7, title: "List item" },
+                { book_id: 1, name: "Placeholder", path: "C:/docs/book.pdf", category: 1 },
+                { book_id: 2, name: "Placeholder", path: "C:/docs/book.pdf", category: 1 },
             ],
         };
     },
@@ -59,16 +54,16 @@ export default {
       NewBookButton,
       AddBookPage
     },
-    // mounted() {
-    //     this.loadBooks();
-    // },
+    mounted() {
+        this.loadBooks();
+    },
     methods: {
         loadBooks() {
             const url = "http://localhost:3000/books";
 
             fetch(url).then((response) => {
                 response.json().then((json) => {
-                    this.items = json["books"]
+                    this.items = json
                 })
             })
         },

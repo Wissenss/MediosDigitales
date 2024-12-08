@@ -8,7 +8,7 @@
                         <ImagePreview />
                         <BookForm />
                     </div>
-                    <ActionButtons />
+                    <ActionButtons @book-submitted="this.load"/>
                 </div>
             </div>
         </div>
@@ -49,6 +49,10 @@ export default {
 
         return { showPopup, closePopup, handleBookSubmission, handleSubmit};
     },
+    methods: {
+
+        
+    }
 };
 </script>
   

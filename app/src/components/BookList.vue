@@ -1,9 +1,9 @@
 <template>
     <div class="item-list">
-        <div v-for="item in items" :key="item.id" class="list-item">
+        <div v-for="item in items" :key="item.book_id" class="list-item">
             <div class="item-content">
                 <div class="item-avatar">A</div>
-                <span class="item-title">{{ item.title }}</span>
+                <span class="item-title">{{ item.name }}</span>
                 <button class="favorite-btn">♡</button>
             </div>
             <input type="checkbox" class="select-checkbox" />

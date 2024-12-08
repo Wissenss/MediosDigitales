@@ -2,11 +2,11 @@
     <div class="book-form">
         <div class="form-group">
             <label>Title</label>
-            <input type="text" v-model="book.title" placeholder="Enter title" />
+            <input id="book-name" type="text" v-model="book.title" placeholder="Enter title" />
         </div>
         <div class="form-group">
             <label>Author</label>
-            <input type="text" v-model="book.author" placeholder="Enter author" />
+            <input id="book-author" type="text" v-model="book.author" placeholder="Enter author" />
         </div>
         <div class="form-group">
             <label>Genre</label>
@@ -18,9 +18,12 @@
                 <button @click="nextGenre">→</button>
             </div>
         </div>
+        <div style="display: none;">
+            <input id="book-category" value="0"/>
+        </div>
         <div class="form-group">
             <label>PDF File</label>
-            <input type="file" @change="handleFileUpload" placeholder="Drag your file here..." />
+            <input id="book-file" type="file" @change="handleFileUpload" placeholder="Drag your file here..." />
         </div>
     </div>
 </template>
@@ -44,18 +47,22 @@ export default {
         prevGenre() {
             this.currentGenre = (this.currentGenre - 1 + this.genres.length) % this.genres.length;
             this.book.genre = this.genres[this.currentGenre];
+
+            document.getElementById("book-category").value = this.currentGenre;
         },
         nextGenre() {
             this.currentGenre = (this.currentGenre + 1) % this.genres.length;
             this.book.genre = this.genres[this.currentGenre];
+
+            document.getElementById("book-category").value = this.currentGenre;
         },
         handleFileUpload(event) {
             this.book.file = event.target.files[0];
         },
-        submitForm() {
-            // Emitimos el objeto book al componente padre
-            this.$emit("submit-book", this.book);
-        }
+        // submitForm() {
+        //     // Emitimos el objeto book al componente padre
+        //     this.$emit("submit-book", this.book);
+        // }
     }
 };
 </script>
